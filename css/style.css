@@ -271,9 +271,8 @@ main {
   padding: 0 1em;
 }
 
-/* Show content when parent has "active" class */
 .expand-item.active .expand-content {
-  max-height: 200px; /* adjust depending on your text */
+  max-height: 200px; /* adjust depending on text */
   padding: 1em;
 }
 
