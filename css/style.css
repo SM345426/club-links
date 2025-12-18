@@ -238,14 +238,6 @@ main {
   text-align: center;
   cursor: pointer;
 }
-.hidden_content {
-  display: none;       /* Hidden by default */
-  margin-top: 1em;
-  padding: 1em;
-  background-color: var(--button_background_color);
-  color: var(--button_text_color);
-  border-radius: 0.5em;
-}
 
 /* Footer Codes */
 
