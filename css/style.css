@@ -275,11 +275,8 @@ main {
   
 }
 .expand-item {
-  width: 41em; /* match your main button width */
+  width: 41em; /* same as your other buttons */
   margin-top: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .expand-btn {
@@ -288,14 +285,9 @@ main {
   color: var(--button_text_color);
   border-radius: 1em;
   min-height: 3.7em;
-  text-align: center;
   cursor: pointer;
-  transition: 0.1s ease;
-}
-
-.expand-btn:hover {
-  color: var(--button_text_hover_color);
-  transform: scale(1.02);
+  text-align: center;
+  font-size: 1em;
 }
 
 .expand-content {
@@ -313,3 +305,4 @@ main {
   margin: 1em 0;
   text-align: center;
 }
+
