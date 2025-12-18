@@ -13,14 +13,3 @@ targets.forEach(element => {
     target.style.display= 'flex'
   })
 })
-// Toggle Join Us section
-const joinButton = document.getElementById('joinUsButton');
-const joinContent = document.getElementById('joinUsContent');
-
-joinButton.addEventListener('click', () => {
-  if (joinContent.style.display === 'none' || joinContent.style.display === '') {
-    joinContent.style.display = 'block';
-  } else {
-    joinContent.style.display = 'none';
-  }
-});
