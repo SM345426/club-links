@@ -272,6 +272,8 @@ main {
     width: 92vw;
     text-align: center;
   }
+  
+}
 .expand-item {
   width: 41em; /* match your main button width */
   margin-top: 1em;
@@ -310,6 +312,4 @@ main {
 .expand-content p {
   margin: 1em 0;
   text-align: center;
-}
-  
 }
