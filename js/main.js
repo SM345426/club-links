@@ -13,18 +13,14 @@ targets.forEach(element => {
     target.style.display= 'flex'
   })
 })
-const expandBtn = document.querySelector(".expand-btn");
-const content = document.querySelector(".expand-content");
+// Toggle Join Us section
+const joinButton = document.getElementById('joinUsButton');
+const joinContent = document.getElementById('joinUsContent');
 
-expandBtn.addEventListener("click", () => {
-  if (content.style.maxHeight) {
-    content.style.maxHeight = null;
-    content.style.paddingTop = "0";
-    content.style.paddingBottom = "0";
+joinButton.addEventListener('click', () => {
+  if (joinContent.style.display === 'none' || joinContent.style.display === '') {
+    joinContent.style.display = 'block';
   } else {
-    content.style.maxHeight = content.scrollHeight + "px";
-    content.style.paddingTop = "1em";
-    content.style.paddingBottom = "1em";
+    joinContent.style.display = 'none';
   }
 });
-
