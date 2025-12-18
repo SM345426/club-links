@@ -238,6 +238,44 @@ main {
   text-align: center;
   cursor: pointer;
 }
+/* Expandable content styles */
+.expand-item {
+  width: 41em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.expand-btn {
+  width: 100%;
+  background-color: var(--button_background_color);
+  color: var(--button_text_color);
+  border-radius: 1em;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+.expand-btn:hover {
+  color: var(--button_text_hover_color);
+  transform: scale(1.02);
+  transition: 0.10s ease;
+}
+
+.expand-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: var(--button_background_color);
+  color: var(--button_text_color);
+  border-radius: 1em;
+  margin-top: 0.5em;
+  padding: 0 1em;
+}
+
+/* Show content when parent has "active" class */
+.expand-item.active .expand-content {
+  max-height: 200px; /* adjust depending on your text */
+  padding: 1em;
+}
 
 /* Footer Codes */
 
