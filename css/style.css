@@ -238,11 +238,11 @@ main {
   text-align: center;
   cursor: pointer;
 }
-/* Matches your existing button style */
 .expand-item {
-  width: 41em;
+  width: 41em; /* match your main button width */
   margin-top: 1em;
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* important: stack button and content */
 }
 
 .expand-btn {
@@ -252,10 +252,8 @@ main {
   border-radius: 1em;
   min-height: 3.7em;
   text-align: center;
-  padding: 0.8em;
-  font-size: 1em;
   cursor: pointer;
-  transition: 0.10s ease;
+  transition: 0.1s ease;
 }
 
 .expand-btn:hover {
@@ -263,6 +261,7 @@ main {
   transform: scale(1.02);
 }
 
+/* Start collapsed */
 .expand-content {
   max-height: 0;
   overflow: hidden;
@@ -271,15 +270,14 @@ main {
   color: var(--button_text_color);
   border-radius: 1em;
   margin-top: 0.5em;
-  padding: 0 1em; /* top/bottom padding animated */
+  padding: 0 1em;
 }
 
+/* Add padding for inner content */
 .expand-content p {
   margin: 1em 0;
-  font-size: 1em;
   text-align: center;
 }
-
 
 /* Footer Codes */
 
