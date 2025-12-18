@@ -238,6 +238,7 @@ main {
   text-align: center;
   cursor: pointer;
 }
+/* Matches your existing button style */
 .expand-item {
   width: 41em;
   margin-top: 1em;
@@ -249,31 +250,36 @@ main {
   background-color: var(--button_background_color);
   color: var(--button_text_color);
   border-radius: 1em;
+  min-height: 3.7em;
+  text-align: center;
   padding: 0.8em;
+  font-size: 1em;
   cursor: pointer;
+  transition: 0.10s ease;
 }
 
 .expand-btn:hover {
   color: var(--button_text_hover_color);
   transform: scale(1.02);
-  transition: 0.10s ease;
 }
 
 .expand-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
   background-color: var(--button_background_color);
   color: var(--button_text_color);
   border-radius: 1em;
   margin-top: 0.5em;
-  padding: 0 1em;
+  padding: 0 1em; /* top/bottom padding animated */
 }
 
-.expand-item.active .expand-content {
-  max-height: 200px; /* adjust depending on text */
-  padding: 1em;
+.expand-content p {
+  margin: 1em 0;
+  font-size: 1em;
+  text-align: center;
 }
+
 
 /* Footer Codes */
 
