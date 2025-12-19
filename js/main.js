@@ -27,3 +27,16 @@ document.querySelectorAll('.expand-btn').forEach(button => {
     currentItem.classList.toggle('active');
   });
 });
+// Applications accordion (only one open)
+document.querySelectorAll('.expand-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const content = button.nextElementSibling;
+
+    document.querySelectorAll('.expand-content').forEach(c => {
+      if (c !== content) c.style.display = 'none';
+    });
+
+    content.style.display =
+      content.style.display === 'block' ? 'none' : 'block';
+  });
+});
