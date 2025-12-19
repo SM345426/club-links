@@ -13,3 +13,17 @@ targets.forEach(element => {
     target.style.display= 'flex'
   })
 })
+// Accordion behavior (only one open at a time)
+document.querySelectorAll('.expand-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const currentItem = button.parentElement;
+
+    document.querySelectorAll('.expandable_small_item').forEach(item => {
+      if (item !== currentItem) {
+        item.classList.remove('active');
+      }
+    });
+
+    currentItem.classList.toggle('active');
+  });
+});
