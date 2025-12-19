@@ -318,33 +318,52 @@ main {
     font-size: 0.95em;
   }
 }
-/* Applications expandable box */
+/* ===== Applications Expandable Accordion ===== */
 
 .expandable_small_item {
-  width: 41em;
+  width: 41em; /* desktop width */
   margin-top: 1em;
 }
 
 .expand-btn {
   width: 100%;
+  min-height: 3.8em;
+  background-color: var(--button_background_color);
+  color: var(--button_text_color);
+  border-radius: 1em;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.1s ease;
+}
+
+.expand-btn:hover {
+  transform: scale(1.02);
 }
 
 .expand-content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
   background-color: var(--button_background_color);
   color: var(--button_text_color);
-  padding: 1em;
   border-radius: 1em;
-  margin-top: 0.5em;
-  text-align: center;
+  padding: 0 1em; /* padding added dynamically when expanded */
+  box-sizing: border-box;
+}
+
+.expandable_small_item.active .expand-content {
+  max-height: 1000px; /* enough to fit all content */
+  padding: 1em;
 }
 
 .expand-content p {
-  margin: 0.8em 0;
+  margin: 0.5em 0;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* Application status badge */
-
 .application-status {
   display: inline-block;
   margin-bottom: 0.6em;
@@ -365,18 +384,27 @@ main {
 }
 
 /* Application link */
-
 .inscription-link {
+  display: inline-block;
+  margin-top: 0.5em;
   color: var(--button_text_hover_color);
   font-weight: 600;
   text-decoration: none;
 }
 
-/* Mobile */
-
+/* ===== Mobile Styles ===== */
 @media (max-width: 768px) {
   .expandable_small_item {
     width: 92vw;
+  }
+  
+  .expand-content p {
+    font-size: 0.95em;
+  }
+  
+  .expand-btn {
+    font-size: 1em;
+    min-height: 3.5em;
   }
 }
 
