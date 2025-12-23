@@ -412,10 +412,4 @@ main {
     min-height: 3.5em;
   }
 }
-@media (max-width: 768px) {
-  body {
-    background-size: contain;
-    background-position: top center;
-  }
-}
 
