@@ -53,8 +53,13 @@ body {
   font: var(--font_size) var(--font_family);
   font-weight: 400;
   line-height: 1.5;
-  background: var(--background_color) var(--background_image) no-repeat center;
-  background-size: cover; 
+
+  background-color: var(--background_color);
+  background-image: var(--background_image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -407,5 +412,10 @@ main {
     min-height: 3.5em;
   }
 }
-
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+    background-position: top center;
+  }
+}
 
